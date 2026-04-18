@@ -5,7 +5,7 @@
     const OriginalXHR = window.XMLHttpRequest;
 
     // ===== config =====
-    const deadNodes = ['wolf.qqdl.site', 'vogel.qqdl.site', 'katze.qqdl.site', 'hund.qqdl.site', 'maus.qqdl.site'];
+    const deadNodes = ['wolf.qqdl.site', 'vogel.qqdl.site', 'katze.qqdl.site', 'hund.qqdl.site', 'maus.qqdl.site', 'https://hifi-two.spotisaver.net', 'https://monochrome-api.samidy.com'];
     const workingApi = 'api.monochrome.tf';
 
     // ===== stream queue =====
