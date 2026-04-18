@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Tidal Ultimate Bypass",
+  "version": "5.0",
+  "description": "Unified bypass: dead nodes, direct streams, downloads, CORS",
+  "permissions": [
+    "storage"
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "host_permissions": [
+    "https://monochrome.tf/*",
+    "https://monochrome.samidy.com/*",
+    "https://*.tidal.com/*",
+    "https://*.qqdl.site/*",
+    "https://api.monochrome.tf/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://monochrome.tf/*",
+        "https://monochrome.samidy.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["inject.js"],
+      "matches": [
+        "https://monochrome.tf/*",
+        "https://monochrome.samidy.com/*"
+      ]
+    }
+  ]
+}
